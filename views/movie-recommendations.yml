@@ -326,3 +326,22 @@
     RETURN hi.title AS Film, hi.raterName AS Loves, hi.rating AS LovesScore,
            lo.raterName AS Hates, lo.rating AS HatesScore
     ORDER BY Film ASC
+
+# ── Statistics over your ratings ────────────────────────────────────────────────────────────
+# Each rater's whole rating history fitted against the crowd, using the engine's DETERMINISTIC
+# reductions (`correlate`/`regress` — arithmetic, no model call, same rows → same answer). The
+# `outliers` field is the point of the view: the films you loved far beyond what your own pattern
+# predicts, and the acclaimed ones that left you cold, BY NAME. One fit per rater falls out of
+# Neo4j's implicit GROUP-BY. Raters with under 15 fetchable films get a null model rather than an
+# overfit one (the engine's own floor for three predictors), and under 3 get no correlation — both
+# are honesty, not failure. Needs an engine that carries the numeric reductions; on an older one
+# this view reports an unknown function and every other view is unaffected.
+- name: WhereIDisagreeWithEveryone
+  description: The SURPRISING ratings — films you scored unexpectedly high or low compared to your own pattern, by name, plus how closely each rater's taste tracks the crowd. Run this for "what's surprising about my film taste", "unexpected ratings", "where do I disagree with everyone", or "which acclaimed films did I hate". Fits each rater's scores against crowd rating, era and runtime; the abovePrediction/belowPrediction lists are the answer. First run fetches metadata for every rated film (one call each, cached for 30 days), so it can be slow cold. "Predicted" means predicted by YOUR OWN history — a fact about your taste, never about the film.
+  cypher: |
+    MATCH (rt:MovieRating)-[:OF]->(m:Movie)
+    RETURN rt.raterName AS rater,
+           count(*) AS filmsFetched,
+           correlate(toFloat(m.imdbRating), toFloat(rt.rating)) AS agreementWithCrowd,
+           regress([toFloat(m.imdbRating), toFloat(m.year), toFloat(m.runtimeMinutes)],
+                   toFloat(rt.rating), m.title) AS model
