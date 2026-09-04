@@ -1,0 +1,819 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-04T00:44:39.310Z",
+  "entries": [
+    {
+      "namespace": "movie",
+      "name": "details",
+      "description": "Fresh OMDb metadata (full plot, ratings, runtime) for this movie.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "Title": {
+            "type": "string"
+          },
+          "Year": {
+            "type": "string"
+          },
+          "Rated": {
+            "type": "string"
+          },
+          "Runtime": {
+            "type": "string"
+          },
+          "Genre": {
+            "type": "string"
+          },
+          "Director": {
+            "type": "string"
+          },
+          "Plot": {
+            "type": "string"
+          },
+          "Poster": {
+            "type": "string"
+          },
+          "imdbRating": {
+            "type": "string"
+          },
+          "imdbID": {
+            "type": "string"
+          }
+        }
+      },
+      "onType": "Movie",
+      "className": "Movie"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "Movie",
+      "className": "Movie"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "StreamingService",
+      "className": "StreamingService"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "UserStreamingSubscription",
+      "className": "UserStreamingSubscription"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "MovieStreamingPreferences",
+      "className": "MovieStreamingPreferences"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "MovieTasteSummary",
+      "className": "MovieTasteSummary"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "MovieRating",
+      "className": "MovieRating"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "MovieWatchlistEntry",
+      "className": "MovieWatchlistEntry"
+    },
+    {
+      "namespace": "movie",
+      "name": "neighbors",
+      "description": "Who/what this entity is connected to, related to, or works with in the knowledge graph. Inherited by every pack type, so a new type is graph- navigable for free. Walks outward `hops` (1–3, default 1); optionally filter relationship types (CSV) and cap with `limit`. Returns the connected nodes nearest-first; empty if this node isn't persisted yet.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hops": {
+            "type": "number"
+          },
+          "relTypes": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "number"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "hops": {
+              "type": "number"
+            },
+            "relPath": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "hops"
+          ]
+        }
+      },
+      "onType": "MovieReview",
+      "className": "MovieReview"
+    },
+    {
+      "namespace": "movie",
+      "name": "rate",
+      "description": "Record the CURRENT USER's rating of this movie (1–10). Recording IS making the link: createEntry against MovieRating auto-emits (me)-[:RATED]->(MovieRating) — and `me` is also a Person, so it reads uniformly with other people's ratings. Identity is `<myId>::<imdbId>`, so a re-rate updates in place. The same gateway op the card's star widget calls. (Attributing a rating to ANOTHER person is a separate flow that resolves that person and links their node.)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rating": {
+            "type": "number"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "watchedOn": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "rating"
+        ]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "onType": "Movie",
+      "className": "Movie"
+    },
+    {
+      "namespace": "movie",
+      "name": "saveForLater",
+      "description": "Put this film on the CURRENT USER's persistent \"Want to See\" list. Identity is `<myId>::<imdbId>`, so saving it again refreshes the same node rather than duplicating it.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "onType": "Movie",
+      "className": "Movie"
+    },
+    {
+      "namespace": "movie",
+      "name": "streaming",
+      "description": "Where this movie is streaming in a country (ISO-3166 alpha-2, lowercase — e.g. 'us', 'au').",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "country"
+        ]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "imdbId": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "streamingOptions": {
+            "type": "object",
+            "properties": {}
+          }
+        }
+      },
+      "onType": "Movie",
+      "className": "Movie"
+    }
+  ],
+  "types": [
+    {
+      "name": "Movie",
+      "fields": {
+        "imdbId": "string",
+        "title": "string",
+        "year": "number",
+        "genre": "string",
+        "country": "string",
+        "director": "string",
+        "runtimeMinutes": "number",
+        "plot": "string",
+        "imdbRating": "number",
+        "imdbVotes": "number",
+        "poster": "string"
+      },
+      "spec": {
+        "userAnchor": false
+      },
+      "identity": "imdbId",
+      "properties": {
+        "year": {
+          "type": "int"
+        },
+        "runtimeMinutes": {
+          "type": "int"
+        },
+        "imdbRating": {
+          "type": "number"
+        },
+        "imdbVotes": {
+          "type": "int"
+        }
+      },
+      "retrieval": {
+        "operation": "omdb.getMovie",
+        "nameFrom": "title",
+        "fieldMap": {
+          "imdbId": "imdbID",
+          "title": "Title",
+          "year": "Year",
+          "genre": "Genre",
+          "country": "Country",
+          "director": "Director",
+          "runtimeMinutes": "Runtime",
+          "plot": "Plot",
+          "imdbRating": "imdbRating",
+          "imdbVotes": "imdbVotes",
+          "poster": "Poster"
+        }
+      },
+      "virtualJoins": [
+        {
+          "anchorLabel": "MovieTasteSummary",
+          "relationship": "SUGGESTS",
+          "keyField": "summary",
+          "recordKeyField": "fromTaste",
+          "producer": "tasteBasedPicks",
+          "description": "Films that match your OVERALL taste, generated from your taste summary rather than from any one rating. A good \"surprise me based on everything I like\" list; exclude films you've already rated."
+        },
+        {
+          "anchorLabel": "MovieTasteSummary",
+          "relationship": "SUGGESTS_NEW",
+          "keyField": "summary",
+          "recordKeyField": "freshFromTaste",
+          "producer": "newReleasePicks",
+          "description": "NEWLY RELEASED films matching your overall taste — currently in cinemas or fresh on streaming, found by live web search rather than from memory. Use for \"anything new out I'd like?\"; exclude films you've already rated."
+        },
+        {
+          "anchorLabel": "MovieRating",
+          "relationship": "OF",
+          "keyField": "imdbId",
+          "recordKeyField": "imdbId",
+          "producer": "movieByImdbId",
+          "description": "The film a rating is OF — its canonical Movie metadata, fetched by imdbId. Traverse this to go from a MovieRating to the full film record (title, year, genre, director, plot, imdbRating) and onward to its reviews or streaming options: (rt:MovieRating)-[:OF]->(m:Movie). One Movie per rating."
+        },
+        {
+          "anchorLabel": "MovieRating",
+          "relationship": "SIMILAR_TO",
+          "keyField": "title",
+          "recordKeyField": "similarTo",
+          "producer": "similarMovies",
+          "description": "Films similar to one the user rated, from the assistant's own film knowledge (not an API). Ratings are on a 1–10 scale, so anchor recommendations on the films the user LOVED, not merely watched: filter `WHERE rt.rating >= 8` (8+/10) — a low-rated film is a negative signal, not a \"more like this\". Each suggestion resolves to its imdbId so it dedupes against already-rated films; exclude everything the user has seen with a NOT EXISTS over their MovieRating imdbIds, and rank by how many loved films point at each candidate (`count(*) DESC`)."
+        },
+        {
+          "anchorLabel": "MovieWatchlistEntry",
+          "relationship": "OF",
+          "keyField": "imdbId",
+          "recordKeyField": "imdbId",
+          "producer": "movieByImdbId",
+          "description": "The canonical Movie this saved-list entry refers to. The watchlist node and WANTS_TO_SEE edge are persisted; this OF hop resolves full IMDb-backed film metadata on demand."
+        }
+      ]
+    },
+    {
+      "name": "MovieRating",
+      "fields": {
+        "ratingKey": "string",
+        "raterId": "string",
+        "raterName": "string",
+        "imdbId": "string",
+        "title": "string",
+        "rating": "number",
+        "notes": "string?",
+        "watchedOn": "string?"
+      },
+      "spec": {
+        "userAnchor": {
+          "predicate": "RATED",
+          "direction": "from-user"
+        }
+      },
+      "identity": "ratingKey",
+      "properties": {
+        "rating": {
+          "type": "int"
+        }
+      }
+    },
+    {
+      "name": "MovieReview",
+      "fields": {
+        "url": "string",
+        "title": "string",
+        "publication": "string",
+        "author": "string",
+        "excerpt": "string",
+        "reviewDate": "string?",
+        "sentiment": "string",
+        "score": "number",
+        "originalScore": "string",
+        "verdict": "string",
+        "movieTitle": "string"
+      },
+      "spec": {
+        "userAnchor": false
+      },
+      "identity": "url",
+      "properties": {
+        "score": {
+          "type": "number"
+        }
+      },
+      "virtualJoins": [
+        {
+          "anchorLabel": "Movie",
+          "relationship": "HAS_REVIEW",
+          "keyField": "title",
+          "recordKeyField": "movieTitle",
+          "producer": "movieReviews",
+          "description": "Individual web-found reviews of the film (one node per review — url, headline, outlet, critic, excerpt, score), gathered by an LLM with web search and cached. Many per film; ORDER BY r.score DESC for the best. Reach it from a recommendation: (m:Movie)-[:HAS_REVIEW]->(r:MovieReview)."
+        }
+      ]
+    },
+    {
+      "name": "MovieStreamingPreferences",
+      "fields": {
+        "userId": "string",
+        "countryCode": "string",
+        "countryName": "string",
+        "updatedAt": "string"
+      },
+      "spec": {
+        "userAnchor": {
+          "predicate": "HAS_MOVIE_STREAMING_PREFERENCES",
+          "direction": "from-user"
+        }
+      },
+      "identity": "userId"
+    },
+    {
+      "name": "MovieTasteSummary",
+      "fields": {
+        "userId": "string",
+        "summary": "string",
+        "count": "number",
+        "generatedAt": "string"
+      },
+      "spec": {
+        "userAnchor": false
+      },
+      "identity": "userId",
+      "properties": {
+        "count": {
+          "type": "int"
+        }
+      },
+      "virtualJoins": [
+        {
+          "anchorLabel": "AssistantUser",
+          "relationship": "HAS_MOVIE_TASTE_SUMMARY",
+          "keyField": "id",
+          "recordKeyField": "anchorKey",
+          "producer": "movieTasteSummary",
+          "description": "The user's film-taste summary, synthesized from every MovieRating they've recorded. One node per user — ask for `ts.summary`. Materialized on demand and cached weekly, so it is cheap to read repeatedly. Use it to answer \"what's my taste in film?\" / \"summarize what I like\" without hand-scanning the ratings."
+        }
+      ]
+    },
+    {
+      "name": "MovieWatchlistEntry",
+      "fields": {
+        "watchlistKey": "string",
+        "userId": "string",
+        "imdbId": "string",
+        "title": "string",
+        "year": "number?",
+        "director": "string?",
+        "genre": "string?",
+        "poster": "string?",
+        "plot": "string?",
+        "addedOn": "string"
+      },
+      "spec": {
+        "userAnchor": {
+          "predicate": "WANTS_TO_SEE",
+          "direction": "from-user"
+        }
+      },
+      "identity": "watchlistKey",
+      "properties": {
+        "year": {
+          "type": "int"
+        }
+      }
+    },
+    {
+      "name": "StreamingService",
+      "fields": {
+        "serviceId": "string",
+        "serviceName": "string"
+      },
+      "spec": {
+        "userAnchor": false
+      },
+      "identity": "serviceId",
+      "virtualJoins": [
+        {
+          "anchorLabel": "Movie",
+          "relationship": "AVAILABLE_ON",
+          "keyField": "imdbId",
+          "recordKeyField": "imdbId",
+          "producer": "streamingByImdb",
+          "description": "Streaming services where this Movie can be watched in the user's country. Only films with at least one option appear, so a plain MATCH filters recommendations to what the user can stream. The EDGE carries the per-film option details (producer edgeProject): `watchLink` (deep link to THIS film on the service) and `offerType` (subscription / free / rent / buy) — read them off the relationship: MATCH (m)-[ao:AVAILABLE_ON]->(s) RETURN ao.watchLink, ao.offerType."
+        }
+      ]
+    },
+    {
+      "name": "UserStreamingSubscription",
+      "fields": {
+        "serviceId": "string",
+        "serviceName": "string"
+      },
+      "spec": {
+        "userAnchor": {
+          "predicate": "SUBSCRIBES_TO",
+          "direction": "from-user"
+        }
+      },
+      "identity": "serviceId"
+    }
+  ]
+}
