@@ -20,6 +20,7 @@ version: 0.7.2
 author: Rod Johnson
 url: https://github.com/johnsonr/realm-movie
 icon: icon.svg
+category: lifestyle
 tags:
   - movies
   - recommendations
